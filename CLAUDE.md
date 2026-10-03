@@ -5,9 +5,11 @@
      Keep this file under ~150 lines — Claude loads it every session.
      See the guide at https://hugosantanna.github.io/clo-author/ for full documentation. -->
 
-**Project:** [YOUR PROJECT NAME]
+**Project:** La relación entre la innovación tecnológica y el desempeño exportador en las Pymes del sector textil en Lima Metropolitana, 2026
 **Institution:** [YOUR INSTITUTION]
-**Field:** [YOUR FIELD — Economics by default. Can be adapted to Finance, Accounting, Marketing, etc.]
+**Field:** Economía de la innovación y comercio internacional (Pymes)
+**Paper type:** Descriptivo/correlacional, encuesta primaria; sin lenguaje causal (INV-8)
+**Language / destination:** Español; tesis (capítulos en `paper/sections/`)
 **Branch:** main
 
 ---
@@ -134,7 +136,7 @@ Output organization: by-script
 
 | Component | File | Status | Description |
 |-----------|------|--------|-------------|
-| Paper | `paper/main.tex` | [draft/submitted/R&R] | [Brief description] |
-| Data | `scripts/R/` | [complete/in-progress] | [Analysis description] |
-| Replication | `paper/replication/` | [not started/ready] | [Deposit status] |
-| Job Market Talk | `paper/talks/job_market_talk.tex` | -- | [Status] |
+| Paper | `paper/main.tex` | draft | Esqueleto de tesis en español (6 capítulos en `paper/sections/`) |
+| Data | `scripts/R/` | not started | Encuesta primaria a Pymes textiles; esqueletos 00–03 listos |
+| Spec | `quality_reports/specs/2026-10-03_pymes-textil-exportacion.md` | DRAFT | Pendiente de aprobación; ver bloqueos |
+| Replication | `paper/replication/` | not started | -- |

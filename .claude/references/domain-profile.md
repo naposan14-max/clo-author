@@ -1,127 +1,107 @@
 # Domain Profile
 
-<!--
-HOW TO USE: Fill this in manually OR let /discover (interactive interview) generate it.
-All agents read this file to calibrate their field-specific behavior.
-Delete sections that don't apply. Add sections specific to your field.
-If no field is specified, agents default to applied economics.
--->
+<!-- All agents read this file to calibrate their field-specific behavior. -->
 
 ## Field
 
-**Primary:** [e.g., Health Economics, Labor Economics, Development, IO, Public Finance]
-**Adjacent subfields:** [e.g., Labor, Public, IO — fields whose methods and journals overlap]
+**Primary:** Economía de la innovación y comercio internacional (innovación y desempeño exportador de Pymes)
+**Adjacent subfields:** Gestión empresarial / international business, economía industrial, desarrollo productivo (Perú)
+**Paper type:** Descriptivo/correlacional (no experimental, encuesta primaria). Sin lenguaje causal (INV-8).
+**Idioma:** Español. **Destino:** Tesis (estructura por capítulos).
 
 ---
 
 ## Target Journals (ranked by tier)
 
-<!-- The Orchestrator uses this for journal selection. The Librarian prioritizes these in searches. -->
-
 | Tier | Journals |
 |------|----------|
-| Top-5 | AER, Econometrica, JPE, QJE, REStud |
-| Top field | [e.g., JHE, RAND JE, AEJ:EP, AEJ:Applied] |
-| Strong field | [e.g., Health Affairs, AJHE, JPubE, JHR] |
-| Specialty | [e.g., Medical Care, Health Services Research] |
+| Aspiracional | Research Policy, Journal of International Business Studies, Small Business Economics |
+| Strong field | International Business Review, Journal of Small Business Management, Technovation |
+| Regional | Economía (PUCP), revistas Scopus/SciELO de gestión y economía de Perú y Latinoamérica |
 
 ---
 
 ## Common Data Sources
 
-<!-- The Explorer prioritizes these. The explorer-critic knows their quirks. -->
-
 | Dataset | Type | Access | Notes |
 |---------|------|--------|-------|
-| [e.g., CPS] | [survey/admin/panel] | [public/restricted] | [key strengths and limitations] |
+| Encuesta propia a Pymes textiles | Survey primaria | Propia | Fuente principal; escalas Likert + datos de exportación; sesgo de autoselección y respuesta |
+| Encuesta Nacional de Empresas (ENE), INEI | Survey | Pública | Contexto y comparación |
+| PRODUCE (Anuarios, directorio de Mype) | Administrativo | Pública | Marco poblacional |
+| SUNAT / ADEX | Administrativo | Pública/parcial | Contexto de exportaciones textiles |
 
 ---
 
 ## Common Identification Strategies
 
-<!-- The Strategist considers these first. The strategist-critic knows field-specific threats. -->
-
 | Strategy | Typical Application | Key Assumption to Defend |
 |----------|-------------------|------------------------|
-| [e.g., State-level DiD] | [Policy variation across states] | [Parallel trends in outcomes across treated/control states] |
+| Correlación (Spearman/Pearson) | Asociación innovación–exportación | Escalas fiables y válidas; interpretación no causal |
+| MCO con errores robustos / logit-probit | Desempeño exportador en función de innovación y controles | Especificación correcta; discutir variables omitidas y endogeneidad como limitación |
+| SEM-PLS (opcional) | Constructos latentes | Validez convergente y discriminante |
 
 ---
 
 ## Field Conventions
 
-<!-- The Coder and Writer follow these. The writer-critic checks for them. -->
-
-- [e.g., Binary outcomes → report LPM alongside logit/probit marginal effects]
-- [e.g., Cost outcomes → log transform or GLM (Gamma, log link)]
-- [e.g., Clustering at state level for state-level policy variation]
-- [e.g., Always discuss moral hazard / adverse selection implications]
-- [e.g., Welfare analysis expected in top-5 submissions]
+- Reportar alfa de Cronbach (o omega) y validez de las escalas
+- Medir innovación según el Manual de Oslo (producto, proceso, organizacional, marketing; dimensión tecnológica/digital)
+- Controles estándar: tamaño (trabajadores), antigüedad, años de experiencia exportadora
+- Errores estándar robustos; reportar tamaño de muestra y tasa de respuesta
+- Discutir explícitamente causalidad inversa (exportar induce innovar, "learning by exporting") y sesgo de selección
+- No usar lenguaje causal: "se asocia con", no "causa"
 
 ---
 
 ## Notation Conventions
 
-<!-- The Writer and writer-critic enforce these. -->
-
 | Symbol | Meaning | Anti-pattern |
 |--------|---------|-------------|
-| [e.g., $Y_{it}$] | [Outcome for individual i at time t] | [Don't use $y$ without subscripts] |
+| $Y_i$ | Desempeño exportador de la empresa $i$ | No usar $y$ sin subíndice |
+| $INN_i$ | Índice de innovación tecnológica de la empresa $i$ | No mezclar con dimensiones |
+| $X_i$ | Vector de controles | |
 
 ---
 
 ## Seminal References
 
-<!-- The Librarian ensures these are cited when relevant. The strategist-critic knows their methods. -->
+<!-- Verificar cada cita con /discover lit antes de usarla. -->
 
 | Paper | Why It Matters |
 |-------|---------------|
-| [e.g., Finkelstein et al. (2012)] | [Oregon HIE — gold standard for insurance effects] |
+| Cavusgil & Zou (1994) | Marco clásico de desempeño exportador |
+| Melitz (2003) | Heterogeneidad de empresas y exportación |
+| Crépon, Duguet & Mairesse (1998) | Modelo CDM: innovación, productividad |
+| OECD/Eurostat (2018) Manual de Oslo | Definición y medición de innovación |
 
 ---
 
 ## Theoretical Foundational References
 
-<!-- The Theorist and theorist-critic default to these anchors when building or reviewing a theory section.
-     Only needed if the paper has a formal theory section (econometric methods, theory+empirics,
-     structural identification, or methodological reduced-form).
-     Leave empty to fall back to the generic econometric theory defaults baked into the theorist agent. -->
-
-| Topic | Anchor references |
-|-------|------------------|
-| [e.g., DiD with staggered adoption] | [e.g., Callaway & Sant'Anna (2021); Sant'Anna & Zhao (2020)] |
-| [e.g., Semiparametric efficiency] | [e.g., Newey (1990, 1994); Bickel-Klaassen-Ritov-Wellner (1993)] |
+Not applicable (sin sección teórica formal).
 
 ---
 
 ## Paper Author Team
 
-<!-- Used by the theorist-critic to calibrate respect. If the authors are themselves among the reference
-     literature on a topic, the critic avoids lecturing them on their own contributions.
-     List author surnames + the topics they are foundational on. -->
-
-| Author | Foundational on |
-|--------|----------------|
-| [e.g., Callaway] | [DiD with staggered adoption, $ATT(g,t)$] |
+Pendiente.
 
 ---
 
 ## Field-Specific Referee Concerns
 
-<!-- The domain-referee and methods-referee watch for these. -->
-
-- [e.g., "Why not use the Oregon HIE?" — must address if studying insurance effects]
-- [e.g., "Selection into treatment" — always a concern in health care utilization studies]
-- [e.g., "Moral hazard vs adverse selection" — referees expect you to distinguish]
-- [e.g., "External validity" — Medicaid population ≠ general population]
+- "Causalidad inversa": ¿innovan para exportar o exportan y por eso innovan?
+- "Sesgo de selección": solo Pymes exportadoras o sobrevivientes
+- "Validez externa": Lima Metropolitana / Gamarra no representa al país
+- "Medición": desempeño exportador subjetivo (Likert) vs. objetivo (ventas)
+- "Tamaño de muestra y muestreo": probabilístico vs. por conveniencia
 
 ---
 
 ## Quality Tolerance Thresholds
 
-<!-- Customize for your domain's standards. Used by quality.md. -->
-
 | Quantity | Tolerance | Rationale |
 |----------|-----------|-----------|
-| Point estimates | [e.g., 1e-6] | [Numerical precision] |
-| Standard errors | [e.g., 1e-4] | [MC variability] |
-| Coverage rates | [e.g., ± 0.01] | [Simulation with B reps] |
+| Point estimates | 1e-6 | Precisión numérica |
+| Standard errors | 1e-4 | Errores robustos |
+| Alfa de Cronbach | >= 0.70 | Umbral convencional de confiabilidad |
